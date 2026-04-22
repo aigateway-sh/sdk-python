@@ -1,0 +1,49 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "aigateway-py"
+version = "0.1.2"
+description = "Official Python SDK for AIgateway — async jobs, sub-accounts, evals, replays, webhook verification. Install as aigateway-py; import as aigateway."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [{ name = "AIgateway" }]
+keywords = ["ai", "aigateway", "openai-compatible", "llm", "mcp", "sdk"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "httpx>=0.24",
+    "typing-extensions>=4.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7",
+    "pytest-asyncio>=0.21",
+    "respx>=0.20",
+    "mypy>=1.5",
+]
+
+[project.urls]
+Homepage = "https://aigateway.sh"
+Documentation = "https://aigateway.sh/docs"
+Repository = "https://github.com/aigateway-sh/sdk-python"
+Source = "https://github.com/aigateway-sh/sdk-python"
+Issues = "https://github.com/aigateway-sh/sdk-python/issues"
+Changelog = "https://aigateway.sh/changelog"
+Examples = "https://github.com/aigateway-sh/examples"
+Support = "https://aigateway.sh/support"
+
+[tool.hatch.build.targets.wheel]
+packages = ["aigateway"]
