@@ -12,7 +12,7 @@ import httpx
 
 DEFAULT_BASE_URL = "https://api.aigateway.sh"
 DEFAULT_MEDIA_BASE_URL = "https://media.aigateway.sh"
-VERSION = "0.1.2"
+VERSION = "0.1.3"
 
 
 class AIgatewayError(Exception):
